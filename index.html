@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f8b4c" />
+  <meta name="description" content="Квиз кредитного брокера РЕДИБРОКЕР — предварительная оценка ситуации за 1 минуту." />
+  <title>РЕДИБРОКЕР — помощь в сложных кредитных ситуациях</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="РЕДИБРОКЕР">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 56 64" role="img">
+            <path d="M28 2 51 10v19c0 16-9.8 27.4-23 33C14.8 56.4 5 45 5 29V10L28 2Z" fill="#0f8b4c"/>
+            <path d="M28 7 46 13v16c0 12.5-7.1 22.4-18 27.6V7Z" fill="#102d5a"/>
+            <path d="M14 17h19v7H20v6h12v7H20v10h-6V17Z" fill="white"/>
+            <path d="M28 17h12v7H28v-7Zm0 13h11v7H28v-7Zm0 13h8v7h-8v-7Z" fill="white"/>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>РЕДИБРОКЕР</strong>
+          <small>Помогаем в сложных<br>кредитных ситуациях</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#process">Как мы работаем</a>
+        <a href="#quiz">Услуги</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <button class="header-cta" data-scroll-quiz>Бесплатная консультация</button>
+      <button class="menu-button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <div class="eyebrow">КРЕДИТНЫЙ БРОКЕР</div>
+          <h1>Помогаем получить кредит даже в сложной ситуации</h1>
+          <p class="hero-lead">Пройдите короткий квиз за 1 минуту и узнайте, какой формат помощи подойдёт именно вам.</p>
+
+          <button class="primary-cta" data-scroll-quiz>
+            <span>Пройти квиз</span>
+            <span class="arrow">→</span>
+          </button>
+
+          <div class="benefits">
+            <article class="benefit">
+              <span class="benefit-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h16v10H4zM6 5h12M7 12h5" /></svg>
+              </span>
+              <div><strong>Без предоплаты</strong><small>Оплата только за результат</small></div>
+            </article>
+            <article class="benefit">
+              <span class="benefit-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7zM15 3v5h5M10 13h6M10 17h6" /></svg>
+              </span>
+              <div><strong>Работаем с любой КИ</strong><small>Даже если были отказы или просрочки</small></div>
+            </article>
+            <article class="benefit">
+              <span class="benefit-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c.6-4.4 3.1-6.6 7-6.6s6.4 2.2 7 6.6" /></svg>
+              </span>
+              <div><strong>Специалисты нашей команды</strong><small>Подбираем решение под вашу ситуацию</small></div>
+            </article>
+          </div>
+
+          <div class="privacy-card">
+            <span class="privacy-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v6c0 5-3 8-8 10-5-2-8-5-8-10V6l8-3Z"/><rect x="9" y="10" width="6" height="5" rx="1"/><path d="M10 10V8.8a2 2 0 0 1 4 0V10"/></svg>
+            </span>
+            <div><strong>Конфиденциально и безопасно</strong><small>Ваши данные защищены и не передаются третьим лицам</small></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <img src="hero-illustration.png" alt="">
+        </div>
+
+        <section class="quiz-card" id="quiz" aria-labelledby="quiz-title">
+          <div class="quiz-topline">
+            <span id="step-label">Шаг 1 из 5</span>
+            <span class="quiz-time">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v5l3 2"/></svg>
+              1 минута
+            </span>
+          </div>
+
+          <div class="progress" aria-hidden="true">
+            <span class="progress-segment active"></span>
+            <span class="progress-segment"></span>
+            <span class="progress-segment"></span>
+            <span class="progress-segment"></span>
+            <span class="progress-segment"></span>
+          </div>
+
+          <div class="quiz-content" aria-live="polite">
+            <h2 id="quiz-title">С какой сложностью вы столкнулись?</h2>
+            <div class="answers" id="answers"></div>
+          </div>
+
+          <div class="quiz-controls">
+            <button class="back-button" id="back-button" type="button" hidden>← Назад</button>
+          </div>
+
+          <div class="quiz-footnote">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="10" width="12" height="9" rx="2"/><path d="M8.5 10V7.5a3.5 3.5 0 0 1 7 0V10"/></svg>
+            Ответы будут переданы специалистам нашей команды
+          </div>
+        </section>
+      </section>
+
+      <section class="process-section" id="process">
+        <h2>Как мы работаем</h2>
+        <div class="process-grid">
+          <article class="process-item">
+            <span class="process-icon">1</span>
+            <div><strong>Вы проходите квиз</strong><p>Отвечаете на несколько простых вопросов</p></div>
+          </article>
+          <article class="process-item">
+            <span class="process-icon">2</span>
+            <div><strong>Мы анализируем ситуацию</strong><p>Изучаем вашу историю и потребности</p></div>
+          </article>
+          <article class="process-item">
+            <span class="process-icon">3</span>
+            <div><strong>Подбираем варианты</strong><p>Предлагаем подходящие варианты решения</p></div>
+          </article>
+          <article class="process-item">
+            <span class="process-icon">4</span>
+            <div><strong>Сопровождаем до результата</strong><p>Помогаем на каждом этапе</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq-section" id="faq">
+        <div>
+          <span class="eyebrow">ЧАСТЫЕ ВОПРОСЫ</span>
+          <h2>Что важно знать до заявки</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Нужно ли платить заранее?</summary>
+            <p>Нет. Условия сотрудничества обсуждаются со специалистом до начала работы.</p>
+          </details>
+          <details>
+            <summary>Можно обратиться с плохой кредитной историей?</summary>
+            <p>Да. Специалист оценивает ситуацию индивидуально, включая просрочки, отказы и высокую долговую нагрузку.</p>
+          </details>
+          <details>
+            <summary>Квиз гарантирует одобрение?</summary>
+            <p>Нет. Квиз помогает собрать исходные данные и определить возможный следующий шаг, но решение принимает кредитная организация.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+      <div>
+        <strong>РЕДИБРОКЕР</strong>
+        <p>Помощь в сложных кредитных ситуациях</p>
+      </div>
+      <button class="footer-cta" data-scroll-quiz>Пройти квиз</button>
+      <small>Информация на сайте не является гарантией получения кредита.</small>
+    </footer>
+  </div>
+
+  <div class="success-modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close-modal aria-label="Закрыть">×</button>
+      <div class="success-icon">✓</div>
+      <h2 id="success-title">Ответы теста сохранены</h2>
+      <p>Оставьте контакт, чтобы специалист нашей команды мог связаться с вами и уточнить детали.</p>
+      <form id="lead-form">
+        <label>
+          Имя
+          <input name="name" type="text" placeholder="Как к вам обращаться" required />
+        </label>
+        <label>
+          Телефон или Telegram
+          <input name="contact" type="text" placeholder="+7 900 000-00-00 или @username" required />
+        </label>
+        <button type="submit" class="primary-cta form-submit">Получить консультацию</button>
+      </form>
+      <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку данных для обратной связи.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
