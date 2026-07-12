@@ -1,0 +1,32 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#eef3f7;font-family:Arial,Helvetica,sans-serif}
+body{display:flex;justify-content:center}
+.reference-stage{position:relative;width:min(100vw,1491px);aspect-ratio:1491/997;overflow:hidden;background:#fff}
+.reference-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block}
+.hotspot,.quiz-hotspots button{position:absolute;border:0;background:transparent;cursor:pointer;border-radius:14px}
+.hotspot:focus-visible,.quiz-hotspots button:focus-visible{outline:3px solid rgba(15,139,76,.45);outline-offset:2px}
+.hotspot-cta{left:3.2%;top:33.6%;width:21%;height:6.2%}
+.quiz-hotspots{position:absolute;left:55.0%;top:31.0%;width:39.0%;height:36.0%}
+.quiz-hotspots button{left:0;width:100%;height:18.2%}
+.quiz-hotspots button:nth-child(1){top:0}
+.quiz-hotspots button:nth-child(2){top:20.3%}
+.quiz-hotspots button:nth-child(3){top:40.6%}
+.quiz-hotspots button:nth-child(4){top:60.9%}
+.quiz-hotspots button:nth-child(5){top:81.2%}
+.modal[hidden]{display:none}
+.modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:18px}
+.modal-backdrop{position:absolute;inset:0;background:rgba(10,30,60,.62);backdrop-filter:blur(6px)}
+.modal-card{position:relative;width:min(100%,520px);background:#fff;border-radius:22px;padding:34px;box-shadow:0 30px 90px rgba(0,0,0,.25);color:#102d5a}
+.modal-close{position:absolute;top:10px;right:16px;border:0;background:none;font-size:32px;color:#6e7f96;cursor:pointer}
+.modal-check{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#eaf8f0;color:#0f8b4c;font-size:30px;font-weight:700}
+.modal-card h2{font-size:30px;margin:18px 0 10px}
+.modal-card p{color:#667897;line-height:1.5}
+.modal-card form{display:grid;gap:14px;margin-top:20px}
+.modal-card label{display:grid;gap:7px;font-weight:700}
+.modal-card input{width:100%;padding:14px 15px;border:1px solid #d8e2ec;border-radius:12px;font:inherit}
+.modal-card form button{border:0;border-radius:12px;padding:15px;background:#0f8b4c;color:#fff;font-weight:700;font-size:16px;cursor:pointer}
+@media(max-width:700px){
+  body{align-items:flex-start;overflow-x:hidden}
+  .reference-stage{width:100vw;min-width:100vw;aspect-ratio:1491/997}
+  .modal-card{padding:26px 20px}
+}
